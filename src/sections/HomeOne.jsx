@@ -28,7 +28,7 @@ export default function HomeOne() {
         },
         { to: "0" },
       ],
-      duration:2000
+      duration: 2000,
     });
   });
 
@@ -46,7 +46,7 @@ export default function HomeOne() {
   }
 
   return (
-    <div className="h-screen relative flex items-center justify-center overflow-x-hidden overflow-y-auto z-50 bg-white">
+    <div className="h-screen relative flex items-center justify-center bg-white">
       <div className="absolute z-20 text-center flex flex-col gap-1 text-neutral-100">
         <h1 ref={headingRef} className={headingClassName}>
           <span className="textHead">SAHIL SAINI</span>
