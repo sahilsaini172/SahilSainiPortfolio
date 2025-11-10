@@ -1,9 +1,10 @@
 import SplitText from "../components/splitText";
 
-export default function HomeTwo() {
+export default function HomeTwo(props) {
   return (
-    <div className="flex justify-center items-center h-screen bg-white overflow-hidden ">
-      <div className="absolute flex flex-col bg-neutral-900 m-8 w-5/6 p-8">
+    <div ref={props.section2Ref} className="flex justify-center items-center h-screen bg-white overflow-hidden ">
+      <span class="w-px h-screen bg-neutral-300 absolute left-[50%] right-[50%] z-1"></span>
+      <div className="absolute flex flex-col bg-neutral-900 m-8 w-5/6 p-8 z-2">
         <div className="flex flex-col text-xs">
           <h3 className="flex items-center gap-1 text-xs font-semibold text-neutral-200">
             <div className="w-7 bg-neutral-200 h-px"></div>ABOUT

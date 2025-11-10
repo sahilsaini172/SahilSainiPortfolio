@@ -1,5 +1,3 @@
-import { Parallax } from "@react-spring/parallax";
-
 export default function HomeThree() {
   return (
     <div className="h-screen relative bg-linear-to-r from-[#0047ab] to-[#1ca9c9] flex items-center justify-center z-30">

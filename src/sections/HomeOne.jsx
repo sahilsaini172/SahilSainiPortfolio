@@ -1,52 +1,29 @@
 import { animate } from "animejs";
-import { ArrowDown } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function HomeOne() {
-  const btnRef = useRef(null);
   const headingRef = useRef(null);
   const subHeadingref = useRef(null);
   const headingClassName =
-    "bg-neutral-950 text-nowrap overflow-hidden py-1 px-4 font-extralight text-xl tracking-widest";
+    "bg-neutral-900 ‰ text-nowrap overflow-hidden py-1 px-4 font-extralight text-xl tracking-widest";
 
   useEffect(() => {
     animate(headingRef.current, {
-      width: [{ from: "-7px", duration: 1000, delay: 100 }, { to: "100%" }],
-      opacity: [{ from: 0, delay: 600, duration: 500 }, { to: 100 }],
+      width: [{ from: "-7px", duration: 1000, delay: 200 }, { to: "100%" }],
+      opacity: [{ from: 0, delay: 700, duration: 500 }, { to: 100 }],
       ease: "inOutCubic",
     });
 
     animate(subHeadingref.current, {
-      width: [{ from: "-7px", duration: 1000, delay: 100 }, { to: "100%" }],
-      opacity: [{ from: 0, delay: 600, duration: 500 }, { to: 100 }],
+      width: [{ from: "-7px", duration: 1000, delay: 200 }, { to: "100%" }],
+      opacity: [{ from: 0, delay: 700, duration: 500 }, { to: 100 }],
       ease: "inOutCubic",
-    });
-    animate(".textHead", {
-      x: [
-        {
-          from: "2rem",
-        },
-        { to: "0" },
-      ],
-      duration: 2000,
     });
   });
 
-  function mouseEnterBtn() {
-    animate(btnRef.current, {
-      scale: 1.2,
-      duration: 500,
-    });
-  }
-  function mouseLeaveBtn() {
-    animate(btnRef.current, {
-      scale: 1,
-      duration: 500,
-    });
-  }
-
   return (
     <div className="h-screen relative flex items-center justify-center bg-white">
+      <span class="w-px h-screen bg-neutral-300 absolute left-[50%] right-[50%] z-1"></span>
       <div className="absolute z-20 text-center flex flex-col gap-1 text-neutral-100">
         <h1 ref={headingRef} className={headingClassName}>
           <span className="textHead">SAHIL SAINI</span>
@@ -61,15 +38,11 @@ export default function HomeOne() {
           Hello
         </p>
       </div>
-      <button className="absolute flex items-center justify-center bg-black z-20 bottom-5 size-10 rounded-full overflow-visible">
-        <span
-          onMouseEnter={() => mouseEnterBtn()}
-          onMouseLeave={() => mouseLeaveBtn()}
-          ref={btnRef}
-          className="absolute flex items-center justify-center size-10 rounded-full bg-black/50"
-        >
-          <ArrowDown size={16} className="text-white" />
-        </span>
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        className="p-4 bg-black absolute left-0 top-0"
+      >
+        submit
       </button>
     </div>
   );
