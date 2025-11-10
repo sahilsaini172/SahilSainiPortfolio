@@ -1,5 +1,5 @@
 import { animate } from "animejs";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function HomeOne() {
   const headingRef = useRef(null);
@@ -38,12 +38,6 @@ export default function HomeOne() {
           Hello
         </p>
       </div>
-      <button
-        onClick={() => setDarkMode(!darkMode)}
-        className="p-4 bg-black absolute left-0 top-0"
-      >
-        submit
-      </button>
     </div>
   );
 }
